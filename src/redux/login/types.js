@@ -1,0 +1,3 @@
+export const CHANGE_LOGIN_FIELD = "CHANGE_LOGIN_FORM_FIELD";
+export const LOGIN_USER = "LOGIN_USER";
+export const LOGOUT_USER = "LOGOUT_USER";
