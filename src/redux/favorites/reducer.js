@@ -1,4 +1,4 @@
-import { ADD_FAVORITE, REMOVE_FAVORITE, SELECT_SORTING } from "./types";
+import { ADD_FAVORITE, REMOVE_FAVORITE, SELECT_SORT_ORDER } from "./types";
 
 const initialState = {
   items: [],
@@ -19,7 +19,7 @@ export default function favoriteReducer(state = initialState, action) {
         ...state,
         items: state.items.filter((el) => el.hotelId !== id),
       };
-    case SELECT_SORTING:
+    case SELECT_SORT_ORDER:
       const { order } = action.payload;
       return { ...state, order };
     default:

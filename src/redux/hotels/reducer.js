@@ -1,8 +1,8 @@
 import {
-  HOTELS_LIST_FAILURE,
-  HOTELS_LIST_REQUEST,
-  HOTELS_LIST_SUCCESS,
-  HOTELS_LIST_OPTIONS,
+  HOTEL_LIST_FAILURE,
+  HOTEL_LIST_REQUEST,
+  HOTEL_LIST_SUCCESS,
+  HOTEL_LIST_OPTIONS,
 } from "./types";
 
 const initialState = {
@@ -14,15 +14,15 @@ const initialState = {
 
 export default function hotelListReducer(state = initialState, action) {
   switch (action.type) {
-    case HOTELS_LIST_REQUEST:
+    case HOTEL_LIST_REQUEST:
       return { ...state, loading: true, error: null, data: [] };
-    case HOTELS_LIST_FAILURE:
+    case HOTEL_LIST_FAILURE:
       const { error } = action.payload;
       return { ...state, loading: false, data: [], error };
-    case HOTELS_LIST_SUCCESS:
+    case HOTEL_LIST_SUCCESS:
       const { data } = action.payload;
       return { ...state, loading: false, error: null, data };
-    case HOTELS_LIST_OPTIONS:
+    case HOTEL_LIST_OPTIONS:
       const { options } = action.payload;
       return { ...state, options };
     default:

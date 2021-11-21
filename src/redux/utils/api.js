@@ -1,11 +1,11 @@
 import {
-  hotelsListRequest,
-  hotelsListSuccess,
-  hotelsListFailure,
+  hotelListRequest,
+  hotelListSuccess,
+  hotelListFailure,
 } from "../hotels/actions.js";
 
 export const hotelListFetch = (options) => async (dispatch) => {
-  dispatch(hotelsListRequest());
+  dispatch(hotelListRequest());
   try {
     let checkIn, checkOut, location;
     if (options) {
@@ -33,18 +33,17 @@ export const hotelListFetch = (options) => async (dispatch) => {
           : `0${checkOut.getMonth() + 1}`
       }-${
         checkOut.getDate() > 9 ? checkOut.getDate() : `0${checkOut.getDate()}`
-      }`
+      }&limit=10`
     );
 
     if (!response.ok) {
       throw new Error(response.statusText);
     }
     const data = await response.json();
-    console.log(data);
     if (data) {
-      dispatch(hotelsListSuccess(data));
+      dispatch(hotelListSuccess(data));
     }
   } catch (e) {
-    dispatch(hotelsListFailure(e.message));
+    dispatch(hotelListFailure(e.message));
   }
 };

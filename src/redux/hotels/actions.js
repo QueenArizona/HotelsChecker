@@ -1,22 +1,22 @@
 import {
-  HOTELS_LIST_FAILURE,
-  HOTELS_LIST_OPTIONS,
-  HOTELS_LIST_REQUEST,
-  HOTELS_LIST_SUCCESS,
+  HOTEL_LIST_FAILURE,
+  HOTEL_LIST_OPTIONS,
+  HOTEL_LIST_REQUEST,
+  HOTEL_LIST_SUCCESS,
 } from "./types";
 
-export function hotelsListRequest() {
-  return { type: HOTELS_LIST_REQUEST };
+export function hotelListRequest() {
+  return { type: HOTEL_LIST_REQUEST };
 }
 
-export function hotelsListSuccess(data) {
-  return { type: HOTELS_LIST_SUCCESS, payload: { data } };
+export function hotelListSuccess(data) {
+  return { type: HOTEL_LIST_SUCCESS, payload: { data } };
 }
 
-export function hotelsListFailure(error) {
-  return { type: HOTELS_LIST_FAILURE, payload: { error } };
+export function hotelListFailure(error) {
+  return { type: HOTEL_LIST_FAILURE, payload: { error } };
 }
 
-export function hotelsListOptions(options) {
-  return { type: HOTELS_LIST_OPTIONS, payload: { options } };
+export function hotelListOptions(options) {
+  return { type: HOTEL_LIST_OPTIONS, payload: { options } };
 }

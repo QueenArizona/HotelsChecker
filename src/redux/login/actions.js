@@ -1,7 +1,7 @@
-import { CHANGE_LOGIN_FIELD, LOGIN_USER, LOGOUT_USER } from "./types";
+import { LOGIN_FIELD_CHANGE, LOGIN_USER, LOGOUT_USER } from "./types";
 
-export function changeLoginField(name, value) {
-  return { type: CHANGE_LOGIN_FIELD, payload: { name, value } };
+export function loginFieldChange(name, value) {
+  return { type: LOGIN_FIELD_CHANGE, payload: { name, value } };
 }
 
 export function loginUser(user) {
