@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/HotelsChecker/static/css/main.7d2066ee.chunk.css",
-    "main.js": "/HotelsChecker/static/js/main.ff6f290b.chunk.js",
-    "main.js.map": "/HotelsChecker/static/js/main.ff6f290b.chunk.js.map",
+    "main.js": "/HotelsChecker/static/js/main.27264d31.chunk.js",
+    "main.js.map": "/HotelsChecker/static/js/main.27264d31.chunk.js.map",
     "runtime-main.js": "/HotelsChecker/static/js/runtime-main.a03db1d0.js",
     "runtime-main.js.map": "/HotelsChecker/static/js/runtime-main.a03db1d0.js.map",
     "static/js/2.42716dbe.chunk.js": "/HotelsChecker/static/js/2.42716dbe.chunk.js",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.a03db1d0.js",
     "static/js/2.42716dbe.chunk.js",
     "static/css/main.7d2066ee.chunk.css",
-    "static/js/main.ff6f290b.chunk.js"
+    "static/js/main.27264d31.chunk.js"
   ]
 }
