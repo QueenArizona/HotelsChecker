@@ -1,0 +1,102 @@
+.layout {
+  position: relative;
+  min-height: 100vh;
+  padding: 321px;
+  background-image: url(../img/backgrounds/login.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.login {
+  position: relative;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 409px;
+  padding: 32px;
+  margin: 0 auto;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.04);
+}
+
+.login-title {
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  color: #424242;
+  text-align: center;
+  text-shadow: -0 -1px 0 #000000, 0 -1px 0 #000000, -0 1px 0 #000000,
+    0 1px 0 #000000, -1px -0 0 #000000, 1px -0 0 #000000, -1px 0 0 #000000,
+    1px 0 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000,
+    1px 1px 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000,
+    -1px 1px 0 #000000, 1px 1px 0 #000000;
+}
+
+.login-form-field {
+  position: relative;
+  margin-top: 24px;
+}
+
+.login-input-title {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  color: #424242;
+}
+
+.login-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #c9cacc;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #424242;
+}
+
+.error-form-field .login-input {
+  border-color: #eb1717;
+}
+
+.error-form-field .login-input-title,
+.error-form-field .login-input,
+.login-message {
+  color: #eb1717;
+}
+
+.login-message {
+  position: absolute;
+  margin-top: 4px;
+  display: none;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 14px;
+}
+
+.error-form-field .login-message {
+  display: block;
+}
+
+.login-button {
+  padding: 15px;
+  margin-top: 32px;
+  border: 1.5px solid #41522e;
+  border-radius: 4px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(104.34deg, #41522e -15.34%, #be8022 145.95%);
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.login-button:hover,
+.login-button:active {
+  cursor: pointer;
+}
