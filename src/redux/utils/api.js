@@ -21,7 +21,7 @@ export const hotelListFetch = (options) => async (dispatch) => {
     }
 
     const response = await fetch(
-      `http://engine.hotellook.com/api/v2/cache.json?location=${location}&currency=rub&checkIn=${checkIn.getFullYear()}-${
+      `https://engine.hotellook.com/api/v2/cache.json?location=${location}&currency=rub&checkIn=${checkIn.getFullYear()}-${
         checkIn.getMonth() + 1 > 9
           ? checkIn.getMonth() + 1
           : `0${checkIn.getMonth() + 1}`
