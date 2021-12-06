@@ -14,7 +14,7 @@ function Search(props) {
     dispatch(searchFieldChange(event.target.name, event.target.value));
   };
 
-  const handleSubmit = (event) => {
+  const handleSearch = (event) => {
     event.preventDefault();
     const isLocationValid = !!location.trim();
     const isDateValid = !!date && new Date(date) >= new Date();
@@ -35,62 +35,62 @@ function Search(props) {
   };
 
   return (
-    <form className="search-form" onSubmit={handleSubmit}>
+    <form className="search__form" onSubmit={handleSearch}>
       <div
-        className={`search-form-field ${
-          errors.includes("location") ? "error-form-field" : ""
+        className={`search__formfield ${
+          errors.includes("location") ? "search__formfield--error" : ""
         }`}
       >
-        <label className="search-input-title" htmlFor="location">
+        <label className="search__input-title" htmlFor="location">
           Локация
         </label>
         <input
-          className="search-input"
+          className="search__input"
           id="location"
           type="text"
           name="location"
           value={location}
           onChange={handleChange}
         />
-        <p className="search-message">Локация не должна быть пустой</p>
+        <p className="search__message">Локация не должна быть пустой</p>
       </div>
       <div
-        className={`search-form-field ${
-          errors.includes("date") ? "error-form-field" : ""
+        className={`search__formfield ${
+          errors.includes("date") ? "search__formfield--error" : ""
         }`}
       >
-        <label className="search-input-title" htmlFor="date">
+        <label className="search__input-title" htmlFor="date">
           Дата заселения
         </label>
         <input
-          className="search-input"
+          className="search__input"
           id="date"
           type="date"
           name="date"
           value={date}
           onChange={handleChange}
         />
-        <p className="search-message">Выберите предстоящую дату</p>
+        <p className="search__message">Выберите предстоящую дату</p>
       </div>
       <div
-        className={`search-form-field ${
-          errors.includes("count") ? "error-form-field" : ""
+        className={`search__formfield ${
+          errors.includes("count") ? "search__formfield--error" : ""
         }`}
       >
-        <label className="search-input-title" htmlFor="count">
+        <label className="search__input-title" htmlFor="count">
           Количество дней
         </label>
         <input
-          className="search-input"
+          className="search__input"
           id="count"
           type="number"
           name="count"
           value={count}
           onChange={handleChange}
         />
-        <p className="search-message">Введите число больше 0</p>
+        <p className="search__message">Введите число больше 0</p>
       </div>
-      <button className="search-button">Найти</button>
+      <button className="search__btn">Найти</button>
     </form>
   );
 }

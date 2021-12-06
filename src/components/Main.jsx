@@ -19,23 +19,23 @@ function Main(props) {
 
   return (
     <main className="main">
-      <div className="main-header">
-        <h3 className="main-title">
-          Отели <span className="title-separator">{arrow}</span>{" "}
+      <div className="main__header">
+        <h3 className="main__title">
+          Отели <span className="main__title-separator">{arrow}</span>{" "}
           {data.length > 0 ? data[0].location.name : "Москва"}
         </h3>
-        <p className="main-date">
+        <p className="main__date">
           {moment(options ? options.date : new Date())
             .locale("ru")
             .format("DD MMMM YYYY")}
         </p>
       </div>
       <Slider />
-      <p className="main-info">
+      <p className="main__info">
         Добавлено в Избранное: <strong>{items.length}</strong>{" "}
         {format(items.length, "hotel")}
       </p>
-      <ul className="main-list">
+      <ul className="main__list">
         {data.map((el) => (
           <Hotel
             key={el.hotelId}

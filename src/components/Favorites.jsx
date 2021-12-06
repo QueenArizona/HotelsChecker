@@ -18,47 +18,51 @@ function Favorites(props) {
 
   const hotels = useMemo(() => sortHotels(items, order), [items, order]);
 
-  const handleClick = (order, type) => {
+  const handleSort = (order, type) => {
     dispatch(selectSortOrder(`${order}-${type}`));
   };
 
   return (
     <div className="favorites">
-      <h3 className="favorites-title">Избранное</h3>
-      <ul className="sorting-list">
+      <h3 className="favorites__title">Избранное</h3>
+      <ul className="favorites__sorting-list">
         {orders.map((el, index) => (
           <li
-            className={`sorting-item ${
+            className={`favorites__sorting-item ${
               order === `${el.order}-up` || order === `${el.order}-down`
-                ? "sorting-item-active"
+                ? "favorites__sorting-item--active"
                 : ""
             }`}
             id={el.order}
             key={index}
           >
-            <p className="sorting-item-name">{el.name}</p>
-            <div className="sorting-item-actions">
+            <p className="favorites__sorting-name">{el.name}</p>
+            <div className="favorites__sorting-action">
               <svg
-                className={`sorting-arrow ${
-                  order === `${el.order}-up` ? "sorting-arrow--active" : ""
+                className={`favorites__sorting-arrow ${
+                  order === `${el.order}-up`
+                    ? "favorites__sorting-arrow--active"
+                    : ""
                 }`}
                 width="9"
                 height="6"
                 viewBox="0 0 9 6"
                 xmlns="http://www.w3.org/2000/svg"
-                onClick={() => handleClick(el.order, "up")}
+                onClick={() => handleSort(el.order, "up")}
               >
                 <path d="M8.49988 4.24264L7.43922 5.3033L4.25724 2.12132L1.07526 5.3033L0.014596 4.24264L4.25724 0L8.49988 4.24264Z" />
               </svg>
               <svg
-                className={`sorting-arrow ${
-                  order === `${el.order}-down` ? "sorting-arrow--active" : ""
+                className={`favorites__sorting-arrow ${
+                  order === `${el.order}-down`
+                    ? "favorites__sorting-arrow--active"
+                    : ""
                 }`}
                 width="9"
                 height="7"
                 viewBox="0 0 9 7"
                 xmlns="http://www.w3.org/2000/svg"
-                onClick={() => handleClick(el.order, "down")}
+                onClick={() => handleSort(el.order, "down")}
               >
                 <path d="M8.49988 1.83245L7.43922 0.77179L4.25724 3.95377L1.07526 0.77179L0.014596 1.83245L4.25724 6.07509L8.49988 1.83245Z" />
               </svg>
@@ -66,7 +70,7 @@ function Favorites(props) {
           </li>
         ))}
       </ul>
-      <ul className="favorites-list">
+      <ul className="favorites__list">
         {items.length > 0 ? (
           hotels.map((el) => (
             <Hotel

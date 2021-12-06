@@ -8,8 +8,8 @@ function Slider(props) {
   return (
     <div className="slider">
       {[slide1, slide2, slide3, slide1, slide2, slide3].map((el, index) => (
-        <div className="slider-item" key={index}>
-          <img className="slider-icon" src={el} alt="slide" />
+        <div className="slider__item" key={index}>
+          <img className="slider__icon" src={el} alt="slide-img" />
         </div>
       ))}
     </div>

@@ -18,19 +18,26 @@ function Hotel({ item, date, count, logo }) {
   };
 
   return (
-    <li className="hotel-item">
-      {logo && <div className="hotel-logo"></div>}
-      <div className="hotel-wrapper">
-        <div className="hotel-item-header">
-          <h4 className="hotel-item-title">{item.hotelName}</h4>
-          <button className="favorite-button" onClick={handleClick}></button>
+    <li className="hotel">
+      {logo && <div className="hotel__logo"></div>}
+      <div className="hotel__wrapper">
+        <div className="hotel__header">
+          <h4 className="hotel__title">{item.hotelName}</h4>
+          <button
+            className={`hotel__favorite-btn ${
+              items.filter((el) => el.hotelId === item.hotelId).length
+                ? "hotel__favorite-btn--active"
+                : ""
+            }`}
+            onClick={handleClick}
+          ></button>
         </div>
-        <div className="hotel-item-info">
-          {date} <span className="info-separator">—</span> {count}{" "}
+        <div className="hotel__info">
+          {date} <span className="hotel__info-separator">—</span> {count}{" "}
           {format(count, "days")}
         </div>
-        <div className="hotel-item-footer">
-          <div className="hotel-item-rating">
+        <div className="hotel__footer">
+          <div className="hotel__rating">
             {Array(item.stars)
               .fill("")
               .map((el, index) => ratingActive(`a${index}`))}
@@ -38,9 +45,9 @@ function Hotel({ item, date, count, logo }) {
               .fill("")
               .map((el, index) => rating(index))}
           </div>
-          <div className="hotel-item-price">
+          <div className="hotel__price">
             Price:
-            <span className="hotel-item-value">{item.priceAvg} ₽</span>
+            <span className="hotel__price-value">{item.priceAvg} ₽</span>
           </div>
         </div>
       </div>

@@ -50,15 +50,18 @@
       format("svg");
 }
 
-body {
+html {
+  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.05rem;
 }
 
-* {
-  box-sizing: border-box;
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
 }
 
 strong {
@@ -66,33 +69,34 @@ strong {
 }
 
 .container {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-.app {
-  min-height: 100vh;
-  padding: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
   background-color: #e5e5e5;
 }
 
-.app-header {
+.app {
+  max-width: 1440px;
+}
+
+.app__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
 
-.app-title {
+.app__title {
   font-size: 24px;
   font-weight: 500;
   line-height: 28px;
   color: #424242;
 }
 
-.logout-button {
-  padding-right: 33px;
+.app__logout-btn {
+  padding-right: 30px;
   border: none;
   background-color: transparent;
   background-image: url("./img/icons/logout.svg");
@@ -106,68 +110,72 @@ strong {
 }
 
 .wrapper {
-  display: flex;
-  justify-content: space-between;
-  width: 1048px;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(1, auto);
+  grid-column-gap: 20px;
 }
 
 .sidebar {
+  grid-column: 1;
+  grid-row: 1;
   display: flex;
   flex-direction: column;
   width: 360px;
 }
 
 .main {
-  width: 664px;
+  grid-column: 2;
+  grid-row: 1;
+  max-width: 664px;
   padding: 48px 32px;
   border-radius: 16px;
   background-color: #ffffff;
   box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.04);
 }
 
-.main-list {
-  max-height: 528px;
+.main__list {
+  max-height: 533px;
   padding-right: 14px;
   overflow: scroll;
 }
 
-.main-header {
+.main__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.main-title {
+.main__title {
   font-size: 32px;
   font-weight: 500;
   line-height: 37px;
   color: #424242;
 }
 
-.title-separator {
+.main__title-separator {
   margin: 0 20px;
   color: #a7a7a7;
 }
 
-.main-date {
+.main__date {
   font-size: 24px;
   line-height: 28px;
   color: #41522e;
 }
 
-.main-list::-webkit-scrollbar {
+.main__list::-webkit-scrollbar {
   width: 2px;
   height: 0;
   background-color: #e7e7e7;
 }
 
-.main-list::-webkit-scrollbar-thumb {
+.main__list::-webkit-scrollbar-thumb {
   width: 2px;
   background-color: #41522e;
 }
 
-.main-info {
+.main__info {
   margin-bottom: 23px;
   font-size: 17px;
   font-weight: 300;

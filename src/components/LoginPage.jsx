@@ -16,7 +16,7 @@ function LoginPage(props) {
     dispatch(loginFieldChange(event.target.name, event.target.value));
   };
 
-  const handleSubmit = (event) => {
+  const handleLogin = (event) => {
     event.preventDefault();
     const isLoginValid = validateLogin(login);
     const isPasswordValid = validatePassword(password);
@@ -34,18 +34,18 @@ function LoginPage(props) {
 
   return (
     <div className="layout">
-      <form className="login" onSubmit={handleSubmit}>
-        <h1 className="login-title">Simple Hotel Check</h1>
+      <form className="login" onSubmit={handleLogin}>
+        <h1 className="login__title">Simple Hotel Check</h1>
         <div
-          className={`login-form-field ${
-            errors.includes("login") ? "error-form-field" : ""
+          className={`login__formfield ${
+            errors.includes("login") ? "login__formfield--error" : ""
           }`}
         >
-          <label className="login-input-title" htmlFor="login">
+          <label className="login__input-title" htmlFor="login">
             Логин
           </label>
           <input
-            className="login-input"
+            className="login__input"
             id="login"
             type="text"
             name="login"
@@ -53,18 +53,18 @@ function LoginPage(props) {
             value={login}
             onChange={handleChange}
           />
-          <p className="login-message">Введите корректный email</p>
+          <p className="login__message">Введите корректный email</p>
         </div>
         <div
-          className={`login-form-field ${
-            errors.includes("password") ? "error-form-field" : ""
+          className={`login__formfield ${
+            errors.includes("password") ? "login__formfield--error" : ""
           }`}
         >
-          <label className="login-input-title" htmlFor="password">
+          <label className="login__input-title" htmlFor="password">
             Пароль
           </label>
           <input
-            className="login-input"
+            className="login__input"
             id="password"
             type="password"
             autoComplete="current-password"
@@ -72,11 +72,11 @@ function LoginPage(props) {
             value={password}
             onChange={handleChange}
           />
-          <p className="login-message">
+          <p className="login__message">
             Введите минимум 8 символов, без кириллицы
           </p>
         </div>
-        <button className="login-button">Войти</button>
+        <button className="login__btn">Войти</button>
       </form>
     </div>
   );

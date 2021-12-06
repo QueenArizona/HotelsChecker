@@ -5,14 +5,12 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="container">
-      <Router>
-        <Switch>
-          <Route path="/app" component={AppPage} />
-          <Route path="/" component={LoginPage} />
-        </Switch>
-      </Router>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/app" component={AppPage} />
+        <Route path="/" component={LoginPage} />
+      </Switch>
+    </Router>
   );
 }
 

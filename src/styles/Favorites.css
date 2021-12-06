@@ -5,7 +5,7 @@
   box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.04);
 }
 
-.favorites-title {
+.favorites__title {
   margin-bottom: 32px;
   font-size: 24px;
   font-weight: 500;
@@ -13,12 +13,12 @@
   color: #424242;
 }
 
-.sorting-list {
+.favorites__sorting-list {
   display: flex;
   margin-bottom: 16px;
 }
 
-.sorting-item {
+.favorites__sorting-item {
   display: flex;
   align-items: center;
   padding: 4px 8px;
@@ -27,11 +27,11 @@
   border-radius: 4px;
 }
 
-.sorting-item-active {
+.favorites__sorting-item--active {
   border-color: #41522e;
 }
 
-.sorting-item-name {
+.favorites__sorting-name {
   margin-right: 9px;
   font-size: 14px;
   line-height: 20px;
@@ -39,29 +39,29 @@
   color: #99a0a3;
 }
 
-.sorting-item-active .sorting-item-name {
+.favorites__sorting-item--active .favorites__sorting-name {
   color: #41522e;
 }
 
-.sorting-item-actions {
+.favorites__sorting-action {
   display: flex;
   flex-direction: column;
   margin-right: 4px;
 }
 
-.sorting-arrow {
+.favorites__sorting-arrow {
   fill: #99a0a3;
 }
 
-.sorting-arrow--active {
+.favorites__sorting-arrow--active {
   fill: #41522e;
 }
 
-.favorites-list {
+.favorites__list {
   max-height: 318px;
   overflow: scroll;
 }
 
-.favorites-list::-webkit-scrollbar {
+.favorites__list::-webkit-scrollbar {
   display: none;
 }
