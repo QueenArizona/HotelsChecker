@@ -1,5 +1,7 @@
 .hotel {
   display: flex;
+  align-items: center;
+  grid-gap: 24px;
   padding: 16px 16px 16px 0;
   border-bottom: 1px solid rgba(135, 135, 135, 0.2);
 }
@@ -10,25 +12,23 @@
 }
 
 .hotel__logo {
+  flex-shrink: 0;
   width: 64px;
   height: 64px;
-  margin-right: 24px;
   border-radius: 50px;
-  background-color: rgba(65, 82, 46, 0.05);
-  background-image: url("../img/icons/logo.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 35px;
+  background: center / 35px no-repeat url("../img/icons/logo.svg")
+    rgba(65, 82, 46, 0.05);
 }
 
 .hotel__wrapper {
-  flex: 1 1 auto;
+  width: 100%;
 }
 
 .hotel__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  grid-gap: 10px;
 }
 
 .hotel__title {
@@ -43,15 +43,12 @@
   width: 21px;
   height: 18px;
   border: none;
-  background-color: transparent;
-  background-image: url("../img/icons/fav.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 21px 18px;
+  color: grey;
 }
 
+.hotel__favorite-btn:hover,
 .hotel__favorite-btn--active {
-  background-image: url("../img/icons/fav-active.svg");
+  color: #e55858;
 }
 
 .hotel__info {
@@ -68,17 +65,15 @@
 
 .hotel__footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  grid-gap: 10px;
 }
 
 .hotel__rating {
   display: flex;
   align-self: flex-end;
-}
-
-.rating-icon {
-  margin-right: 3px;
-  fill: #cdbc1e;
+  grid-gap: 3px;
 }
 
 .hotel__price {
@@ -95,4 +90,37 @@
   line-height: 22px;
   letter-spacing: -0.408px;
   color: #424242;
+}
+
+@media (max-width: 575px) {
+  .hotel {
+    grid-gap: 15px;
+    padding: 10px 10px 10px 0;
+  }
+
+  .hotel__logo {
+    display: none;
+  }
+
+  .hotel__title {
+    font-size: 14px;
+  }
+
+  .hotel__favorite-btn {
+    width: 21px;
+    height: 18px;
+  }
+
+  .hotel__info {
+    font-size: 12px;
+  }
+
+  .hotel__info-separator {
+    margin: 0 8px;
+  }
+
+  .hotel__price-value {
+    margin-left: 8px;
+    font-size: 14px;
+  }
 }

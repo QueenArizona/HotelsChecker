@@ -15,16 +15,18 @@
 
 .favorites__sorting-list {
   display: flex;
+  grid-gap: 8px;
   margin-bottom: 16px;
 }
 
 .favorites__sorting-item {
   display: flex;
   align-items: center;
+  grid-gap: 9px;
   padding: 4px 8px;
-  margin-right: 8px;
   border: 1px solid #e5e5e5;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .favorites__sorting-item--active {
@@ -32,7 +34,6 @@
 }
 
 .favorites__sorting-name {
-  margin-right: 9px;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: -0.408px;
@@ -46,7 +47,7 @@
 .favorites__sorting-action {
   display: flex;
   flex-direction: column;
-  margin-right: 4px;
+  grid-gap: 1px;
 }
 
 .favorites__sorting-arrow {
@@ -64,4 +65,21 @@
 
 .favorites__list::-webkit-scrollbar {
   display: none;
+}
+
+@media (max-width: 992px) {
+  .favorites__list {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 575px) {
+  .favorites {
+    padding: 15px;
+  }
+
+  .favorites__title {
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
 }

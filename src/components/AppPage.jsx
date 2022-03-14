@@ -16,22 +16,24 @@ function AppPage(props) {
     }
   }, [history, user]);
 
-  const handleLogout = (event) => {
+  const logout = (event) => {
     dispatch(logoutUser());
     history.push("/");
   };
   return (
-    <div className="container">
-      <div className="app">
-        <header className="app__header">
-          <h2 className="app__title">Simple Hotel Check</h2>
-          <button className="app__logout-btn" onClick={handleLogout}>
-            Выйти
-          </button>
-        </header>
-        <div className="wrapper">
-          <Sidebar />
-          <Main />
+    <div className="app">
+      <div className="container">
+        <div className="app__inner">
+          <header className="app__header">
+            <h2 className="app__title">Simple Hotel Check</h2>
+            <button className="app__logout-btn" onClick={logout}>
+              Выйти
+            </button>
+          </header>
+          <div className="wrapper">
+            <Sidebar />
+            <Main />
+          </div>
         </div>
       </div>
     </div>

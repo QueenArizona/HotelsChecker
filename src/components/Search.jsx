@@ -10,11 +10,11 @@ function Search(props) {
   const { errors } = useSelector((state) => state.errors);
   const dispatch = useDispatch();
 
-  const handleChange = (event) => {
+  const changeField = (event) => {
     dispatch(searchFieldChange(event.target.name, event.target.value));
   };
 
-  const handleSearch = (event) => {
+  const search = (event) => {
     event.preventDefault();
     const isLocationValid = !!location.trim();
     const isDateValid = !!date && new Date(date) >= new Date();
@@ -35,7 +35,7 @@ function Search(props) {
   };
 
   return (
-    <form className="search__form" onSubmit={handleSearch}>
+    <form className="search__form" onSubmit={search}>
       <div
         className={`search__formfield ${
           errors.includes("location") ? "search__formfield--error" : ""
@@ -50,7 +50,7 @@ function Search(props) {
           type="text"
           name="location"
           value={location}
-          onChange={handleChange}
+          onChange={changeField}
         />
         <p className="search__message">Локация не должна быть пустой</p>
       </div>
@@ -68,7 +68,7 @@ function Search(props) {
           type="date"
           name="date"
           value={date}
-          onChange={handleChange}
+          onChange={changeField}
         />
         <p className="search__message">Выберите предстоящую дату</p>
       </div>
@@ -86,7 +86,7 @@ function Search(props) {
           type="number"
           name="count"
           value={count}
-          onChange={handleChange}
+          onChange={changeField}
         />
         <p className="search__message">Введите число больше 0</p>
       </div>

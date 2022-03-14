@@ -2,15 +2,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  grid-gap: 16px;
   padding: 32px;
-  margin-bottom: 24px;
   border-radius: 16px;
   background-color: #ffffff;
   box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.04);
-}
-
-.search__formfield {
-  margin-bottom: 16px;
 }
 
 .search__input-title {
@@ -69,5 +65,27 @@
 
 .search__btn:hover,
 .search__btn:active {
+  background: linear-gradient(104.34deg, #3f502c -15.34%, #b37820 145.95%);
   cursor: pointer;
+}
+
+@media (max-width: 575px) {
+  .search__form {
+    padding: 15px;
+  }
+
+  .search__input {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .search__message {
+    margin-top: 2px;
+    font-size: 10px;
+  }
+
+  .search__btn {
+    margin-top: 8px;
+    padding: 8px;
+  }
 }

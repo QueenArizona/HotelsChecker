@@ -21,7 +21,7 @@ function Main(props) {
     <main className="main">
       <div className="main__header">
         <h3 className="main__title">
-          Отели <span className="main__title-separator">{arrow}</span>{" "}
+          Отели<span className="main__title-separator">{arrow}</span>
           {data.length > 0 ? data[0].location.name : "Москва"}
         </h3>
         <p className="main__date">
