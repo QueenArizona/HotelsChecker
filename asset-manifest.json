@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/HotelsChecker/static/css/main.9aef9296.chunk.css",
-    "main.js": "/HotelsChecker/static/js/main.6dc639ed.chunk.js",
-    "main.js.map": "/HotelsChecker/static/js/main.6dc639ed.chunk.js.map",
+    "main.css": "/HotelsChecker/static/css/main.15e8dbc0.chunk.css",
+    "main.js": "/HotelsChecker/static/js/main.c3b62318.chunk.js",
+    "main.js.map": "/HotelsChecker/static/js/main.c3b62318.chunk.js.map",
     "runtime-main.js": "/HotelsChecker/static/js/runtime-main.a03db1d0.js",
     "runtime-main.js.map": "/HotelsChecker/static/js/runtime-main.a03db1d0.js.map",
     "static/js/2.42716dbe.chunk.js": "/HotelsChecker/static/js/2.42716dbe.chunk.js",
@@ -10,10 +10,10 @@
     "static/js/3.16317a75.chunk.js": "/HotelsChecker/static/js/3.16317a75.chunk.js",
     "static/js/3.16317a75.chunk.js.map": "/HotelsChecker/static/js/3.16317a75.chunk.js.map",
     "index.html": "/HotelsChecker/index.html",
-    "static/css/main.9aef9296.chunk.css.map": "/HotelsChecker/static/css/main.9aef9296.chunk.css.map",
+    "static/css/main.15e8dbc0.chunk.css.map": "/HotelsChecker/static/css/main.15e8dbc0.chunk.css.map",
     "static/js/2.42716dbe.chunk.js.LICENSE.txt": "/HotelsChecker/static/js/2.42716dbe.chunk.js.LICENSE.txt",
-    "static/media/Hotel.css": "/HotelsChecker/static/media/logo.2685f6fc.svg",
     "static/media/LoginPage.css": "/HotelsChecker/static/media/login.49c99287.jpg",
+    "static/media/Hotel.css": "/HotelsChecker/static/media/logo.2685f6fc.svg",
     "static/media/App.css": "/HotelsChecker/static/media/roboto-v29-latin-ext_latin_cyrillic-ext_cyrillic-regular.69620c58.eot",
     "static/media/slide1.c6943c1a.jpg": "/HotelsChecker/static/media/slide1.c6943c1a.jpg",
     "static/media/slide2.7b224b2b.jpg": "/HotelsChecker/static/media/slide2.7b224b2b.jpg",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.a03db1d0.js",
     "static/js/2.42716dbe.chunk.js",
-    "static/css/main.9aef9296.chunk.css",
-    "static/js/main.6dc639ed.chunk.js"
+    "static/css/main.15e8dbc0.chunk.css",
+    "static/js/main.c3b62318.chunk.js"
   ]
 }
